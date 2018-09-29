@@ -8,8 +8,13 @@ function nestedForLoops (depth, width = depth) {
   let result = "\n";
 
   // Write code here
-  for (let x = 0; x < width; x++) {
-    result += `{x: ${x}}, `;
+  // for (let x = 0; x < width; x++) {
+  //   result += `{x: ${x}}, `;
+  // }
+
+  for (let y = 0; y < depth; y++) {
+    result += `\n {y: ${y}},`;
+    
   }
 
   return result;
