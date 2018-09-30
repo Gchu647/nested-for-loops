@@ -10,7 +10,11 @@ function nestedForLoops (depth, width = depth) {
   // Write code here
   for (let y = 0; y < depth; y++) {
     for (let x = 0; x < width; x++) {
-      result += `{x: ${x}, y: ${y}}, `;
+      result += `{x:${x}, y:${y}}`;
+      
+      if(x < width -1) {
+        result += ', ';
+      }
     }
 
     result += '\n';
@@ -20,4 +24,4 @@ function nestedForLoops (depth, width = depth) {
 };
 
 // To see your console output outside the tests add function calls here.
-console.log(nestedForLoops(2));
+console.log(nestedForLoops(3));
